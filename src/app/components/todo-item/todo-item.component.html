@@ -1,0 +1,6 @@
+<div>
+    <input type="checkbox" id="checkbox" [(ngModel)]="todo.checked">
+    <input type="text" [(ngModel)]="todo.text" [ngClass]="todo.class" id="text">
+    
+    <button (click)="deleteItem()" *ngIf="todo.checked">Delete Item</button>
+</div>

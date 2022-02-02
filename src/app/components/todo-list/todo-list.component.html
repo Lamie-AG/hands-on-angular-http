@@ -1,0 +1,15 @@
+<h2>Todo List</h2>
+
+<div *ngFor="let todo of todos">
+    <app-todo-item [todo]="todo" (deletedEvent)="onTodoDeleted($event)"></app-todo-item>
+    <br>
+</div>
+
+<button (click)="addTodoItem()" *ngIf="!addTodoItemActive">Add Todo Item</button>
+
+<div *ngIf="addTodoItemActive">
+    <input type="checkbox" id="checkbox" [(ngModel)]="newChecked">
+    <input type="text" [(ngModel)]="newText" id="text">
+
+    <button (click)="createTodoItem()">Create Todo Item</button>
+</div>

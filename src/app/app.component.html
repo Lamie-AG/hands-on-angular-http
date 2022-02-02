@@ -2,4 +2,12 @@
 <hr>
 
 <p>
+    Angular already provides an HttpClient which we can easily inject into our components. The methods provided by the http client are very straightforward since they are called get, post, put, delete, ...
+    <br>
+    But there is one catch. Usually Http Requests in javascript are handled with async/await and Promises but this is not the case in Angular. Another concept called Observables handles the streams of the http request.
+    <br>
+    Every http request returns an Observable object. In order to get the streamed data we have to subscribe to the Observable which then sends the stream via the next parameter.
 </p>
+
+
+<app-todo-list></app-todo-list>
